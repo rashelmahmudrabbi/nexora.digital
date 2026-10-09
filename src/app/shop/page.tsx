@@ -1,43 +1,40 @@
+'use client';
+
+import { Suspense, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { sampleProducts, sampleCategories } from '@/lib/data';
 import ProductCard from '@/components/shop/ProductCard';
 import Link from 'next/link';
 
-interface ShopProps {
-  searchParams: Promise<{
-    category?: string;
-    search?: string;
-    sort?: string;
-  }>;
-}
-
-export default async function ShopPage({ searchParams }: ShopProps) {
-  const resolvedParams = await searchParams;
-  const currentCategory = resolvedParams.category || 'all';
-  const currentSearch = (resolvedParams.search || '').toLowerCase();
-  const currentSort = resolvedParams.sort || 'default';
+function ShopContent() {
+  const searchParams = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    searchParams.get('category') || 'all'
+  );
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('default');
 
   let products = [...sampleProducts];
 
   // Category filter
-  if (currentCategory !== 'all') {
-    products = products.filter((p) => p.category?.slug === currentCategory);
+  if (selectedCategory !== 'all') {
+    products = products.filter((p) => p.category?.slug === selectedCategory);
   }
 
   // Search filter
-  if (currentSearch) {
+  if (searchQuery.trim()) {
+    const q = searchQuery.toLowerCase();
     products = products.filter(
-      (p) =>
-        p.name.toLowerCase().includes(currentSearch) ||
-        p.description.toLowerCase().includes(currentSearch)
+      (p) => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)
     );
   }
 
-  // Sort
-  if (currentSort === 'price-low') {
+  // Sorting
+  if (sortBy === 'price-low') {
     products.sort((a, b) => a.price - b.price);
-  } else if (currentSort === 'price-high') {
+  } else if (sortBy === 'price-high') {
     products.sort((a, b) => b.price - a.price);
-  } else if (currentSort === 'name') {
+  } else if (sortBy === 'name') {
     products.sort((a, b) => a.name.localeCompare(b.name));
   }
 
@@ -74,28 +71,58 @@ export default async function ShopPage({ searchParams }: ShopProps) {
         >
           {/* Categories Tab Pill */}
           <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
-            <Link
-              href="/shop"
-              className={`btn btn-sm ${currentCategory === 'all' ? 'btn-primary' : 'btn-secondary'}`}
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`btn btn-sm ${selectedCategory === 'all' ? 'btn-primary' : 'btn-secondary'}`}
+              type="button"
             >
               All Items ({sampleProducts.length})
-            </Link>
+            </button>
             {sampleCategories.map((c) => (
-              <Link
+              <button
                 key={c.id}
-                href={`/shop?category=${c.slug}`}
-                className={`btn btn-sm ${currentCategory === c.slug ? 'btn-primary' : 'btn-secondary'}`}
+                onClick={() => setSelectedCategory(c.slug)}
+                className={`btn btn-sm ${selectedCategory === c.slug ? 'btn-primary' : 'btn-secondary'}`}
+                type="button"
               >
                 {c.name}
-              </Link>
+              </button>
             ))}
           </div>
 
-          {/* Sort Selector */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
-            <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-muted)' }}>
-              Showing {products.length} products
-            </span>
+          {/* Search & Sort Controls */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                padding: '6px 12px',
+                borderRadius: 'var(--radius-md)',
+                background: 'var(--color-bg-primary)',
+                border: '1px solid var(--color-border-primary)',
+                color: 'var(--color-text-primary)',
+                fontSize: 'var(--font-size-xs)',
+              }}
+            />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              style={{
+                padding: '6px 10px',
+                borderRadius: 'var(--radius-md)',
+                background: 'var(--color-bg-primary)',
+                border: '1px solid var(--color-border-primary)',
+                color: 'var(--color-text-primary)',
+                fontSize: 'var(--font-size-xs)',
+              }}
+            >
+              <option value="default">Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name">Name: A-Z</option>
+            </select>
           </div>
         </div>
 
@@ -126,12 +153,27 @@ export default async function ShopPage({ searchParams }: ShopProps) {
             <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--space-lg)' }}>
               Try adjusting your category filter or search keywords.
             </p>
-            <Link href="/shop" className="btn btn-primary">
-              View All Products
-            </Link>
+            <button
+              onClick={() => {
+                setSelectedCategory('all');
+                setSearchQuery('');
+              }}
+              className="btn btn-primary"
+              type="button"
+            >
+              Reset Filters
+            </button>
           </div>
         )}
       </div>
     </div>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="container" style={{ padding: '100px 0', textAlign: 'center' }}>Loading products...</div>}>
+      <ShopContent />
+    </Suspense>
   );
 }

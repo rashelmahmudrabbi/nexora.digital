@@ -9,6 +9,12 @@ interface ProductDetailPageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  return sampleProducts.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const product = sampleProducts.find((p) => p.slug === resolvedParams.slug);
@@ -226,11 +232,11 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             {/* Order Action Button */}
             <div style={{ display: 'flex', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
               <Link
-                href={`/checkout?productId=${product.id}`}
+                href={`/contact?product=${encodeURIComponent(product.name)}`}
                 className="btn btn-primary btn-lg"
                 style={{ flex: 1, minWidth: '200px' }}
               >
-                Proceed to Order
+                Order via Support
               </Link>
               <a
                 href="https://wa.me/8801700000000"
