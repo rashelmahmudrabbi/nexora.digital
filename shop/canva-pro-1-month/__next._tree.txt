@@ -1,5 +1,5 @@
-:HL["/nexora.digital/_next/static/chunks/2-xuz3ll4sdsj.css","style"]
+:HL["/nexora.digital/_next/static/chunks/2gwod_8tmp_ps.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"canva-pro-1-month","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"shop","h":64,"c":"$Q2"}]]
-0:{"b":"tvZZoN21KCSQ0vGEeaYCP","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"CoNGcv0ZEeHNZoupkVsgx","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
