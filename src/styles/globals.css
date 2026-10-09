@@ -9,14 +9,18 @@
 /* ─── CSS Custom Properties (Design Tokens) ───────────────────────────── */
 :root {
   /* Primary Palette */
-  --color-bg-primary: #06080f;
-  --color-bg-secondary: #0a0e1a;
-  --color-bg-tertiary: #0f1629;
-  --color-bg-card: #111827;
-  --color-bg-card-hover: #1a2235;
-  --color-bg-elevated: #1e293b;
-  --color-bg-glass: rgba(17, 24, 39, 0.7);
-  --color-bg-glass-light: rgba(30, 41, 59, 0.5);
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0a0a0c;
+  --color-bg-tertiary: rgba(255, 255, 255, 0.03);
+  --color-bg-card: rgba(25, 25, 30, 0.4);
+  --color-bg-card-hover: rgba(40, 40, 45, 0.6);
+  --color-bg-elevated: rgba(255, 255, 255, 0.08);
+  --color-bg-glass: rgba(20, 20, 25, 0.65);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  --color-bg-glass-light: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 
   /* Accent Colors */
   --color-accent-blue: #00d4ff;
@@ -36,8 +40,8 @@
   --color-text-muted: #475569;
 
   /* Border Colors */
-  --color-border-primary: rgba(148, 163, 184, 0.1);
-  --color-border-secondary: rgba(148, 163, 184, 0.06);
+  --color-border-primary: rgba(255, 255, 255, 0.12);
+  --color-border-secondary: rgba(255, 255, 255, 0.05);
   --color-border-accent: rgba(0, 212, 255, 0.3);
   --color-border-glow: rgba(0, 212, 255, 0.15);
 
@@ -692,4 +696,20 @@ textarea.input {
   .btn-lg {
     padding: 0.75rem 1.75rem;
   }
+}
+
+
+/* Apple Glass Additions */
+.glass-panel {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+.card {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--color-border-primary);
 }
