@@ -218,8 +218,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 </div>
                 <div>
                   <span style={{ color: 'var(--color-text-muted)' }}>Availability: </span>
-                  <strong style={{ color: product.inStock ? '#10b981' : '#ef4444' }}>
-                    {product.inStock ? 'In Stock' : 'Out of Stock'}
+                  <strong style={{ color: product.availability === 'IN_STOCK' ? '#10b981' : '#ef4444' }}>
+                    {product.availability === 'IN_STOCK' ? 'In Stock' : 'On Request / Unavailable'}
                   </strong>
                 </div>
                 <div>
