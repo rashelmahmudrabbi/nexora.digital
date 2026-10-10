@@ -69,9 +69,7 @@ export default function Home() {
             </div>
 
             <h1 className={styles.heroTitle}>
-              Your Digital World,
-              <br />
-              <span className={styles.heroTitleAccent}>One Trusted Store.</span>
+              Your Digital World, <span className={styles.heroTitleAccent}>One Trusted Store.</span>
             </h1>
 
             <p className={styles.heroSubtitle}>
