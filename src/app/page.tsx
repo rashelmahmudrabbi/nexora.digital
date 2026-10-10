@@ -101,27 +101,27 @@ export default function Home() {
 
           {/* Hero Visual - Floating Cards */}
           <div className={styles.heroVisual}>
-            <div className={styles.floatingCard1}>
+            <Link href="/shop?category=ai-productivity" className={styles.floatingCard1}>
               <div className={styles.floatingCardIcon}>🧠</div>
               <div>
                 <div className={styles.floatingCardTitle}>AI Tools</div>
-                <div className={styles.floatingCardSub}>ChatGPT, Canva Pro</div>
-              </div>
-            </div>
-            <div className={styles.floatingCard2}>
+                  <div className={styles.floatingCardSub}>ChatGPT, Canva Pro</div>
+                </div>
+              </Link>
+            <Link href="/shop?category=gaming-topups" className={styles.floatingCard2}>
               <div className={styles.floatingCardIcon}>🎮</div>
               <div>
                 <div className={styles.floatingCardTitle}>Gaming Top-Ups</div>
-                <div className={styles.floatingCardSub}>Free Fire, PUBG</div>
-              </div>
-            </div>
-            <div className={styles.floatingCard3}>
+                  <div className={styles.floatingCardSub}>Free Fire, PUBG</div>
+                </div>
+              </Link>
+            <Link href="/shop?category=software-digital" className={styles.floatingCard3}>
               <div className={styles.floatingCardIcon}>📦</div>
               <div>
                 <div className={styles.floatingCardTitle}>Digital Goods</div>
-                <div className={styles.floatingCardSub}>Spotify, YouTube</div>
-              </div>
-            </div>
+                  <div className={styles.floatingCardSub}>Spotify, YouTube</div>
+                </div>
+              </Link>
             <div className={styles.heroGlowCenter} />
           </div>
         </div>

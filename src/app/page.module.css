@@ -180,12 +180,24 @@
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-lg);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(16px);
   border: 1px solid var(--color-border-primary);
   border-radius: var(--radius-xl);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.floatingCard1:hover,
+.floatingCard2:hover,
+.floatingCard3:hover {
+  /* transform disabled to preserve float animation */
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 16px 32px rgba(0, 212, 255, 0.15);
+  background: #ffffff;
 }
 
 .floatingCard1 {
