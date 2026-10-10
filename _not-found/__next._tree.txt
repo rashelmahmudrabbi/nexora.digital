@@ -1,4 +1,4 @@
 :HL["/nexora.digital/_next/static/chunks/3hgyf4roa22dm.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":64,"c":"$Q2"}]]
-0:{"b":"qybog1UwmkRANJgfYF3DS","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"jRPJT_742m4qwuZ_XRVXD","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
