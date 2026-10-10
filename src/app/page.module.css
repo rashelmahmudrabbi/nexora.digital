@@ -180,7 +180,7 @@
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-lg);
-  background: rgba(17, 24, 39, 0.75);
+  background: var(--color-bg-glass);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-xl);
@@ -489,4 +489,12 @@
     flex-direction: column;
     min-height: auto;
   }
+}
+
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
