@@ -79,11 +79,11 @@
   align-items: center;
   gap: var(--space-sm);
   padding: 6px 14px;
-  background: rgba(0, 212, 255, 0.08);
+  background: rgba(0, 212, 255, 0.15);
   border: 1px solid rgba(0, 212, 255, 0.25);
   border-radius: var(--radius-full);
   color: var(--color-accent-cyan);
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -100,7 +100,7 @@
 }
 
 .heroTitle {
-  font-size: var(--font-size-5xl);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -115,7 +115,7 @@
 }
 
 .heroSubtitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--text-lg);
   color: var(--color-text-secondary);
   line-height: 1.6;
   max-width: 540px;
@@ -143,14 +143,14 @@
 }
 
 .heroStatValue {
-  font-size: var(--font-size-2xl);
+  font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--color-accent-cyan);
   letter-spacing: -0.02em;
 }
 
 .heroStatLabel {
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   color: var(--color-text-muted);
 }
 
@@ -182,7 +182,7 @@
   padding: var(--space-md) var(--space-lg);
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--radius-xl);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   transition: all var(--transition-normal);
@@ -234,12 +234,12 @@
 
 .floatingCardTitle {
   font-weight: 700;
-  font-size: var(--font-size-base);
+  font-size: var(--text-base);
   color: var(--color-text-primary);
 }
 
 .floatingCardSub {
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   color: var(--color-text-secondary);
 }
 
@@ -291,19 +291,19 @@
 
 .categoryCard:hover .categoryIconWrapper {
   background: var(--color-accent-cyan);
-  color: var(--color-bg-primary);
+  color: #ffffff;
   transform: scale(1.08);
 }
 
 .categoryName {
-  font-size: var(--font-size-xl);
+  font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--space-sm);
 }
 
 .categoryDesc {
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   color: var(--color-text-secondary);
   line-height: 1.5;
   margin-bottom: var(--space-lg);
@@ -311,7 +311,7 @@
 }
 
 .categoryCount {
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-accent-cyan);
   text-transform: uppercase;
@@ -368,7 +368,7 @@
 }
 
 .stepNum {
-  font-size: var(--font-size-3xl);
+  font-size: var(--text-3xl);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.08);
   margin-bottom: var(--space-md);
@@ -387,14 +387,14 @@
 }
 
 .stepTitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--text-lg);
   font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--space-sm);
 }
 
 .stepDesc {
-  font-size: var(--font-size-sm);
+  font-size: var(--text-sm);
   color: var(--color-text-secondary);
   line-height: 1.5;
 }
@@ -432,14 +432,14 @@
 }
 
 .trustTitle {
-  font-size: var(--font-size-base);
+  font-size: var(--text-base);
   font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--space-xs);
 }
 
 .trustDesc {
-  font-size: var(--font-size-xs);
+  font-size: var(--text-xs);
   color: var(--color-text-secondary);
 }
 
@@ -470,7 +470,7 @@
 
 @media (max-width: 640px) {
   .heroTitle {
-    font-size: var(--font-size-3xl);
+    font-size: var(--text-3xl);
   }
 
   .heroStats {
