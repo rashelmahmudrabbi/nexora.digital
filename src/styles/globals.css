@@ -9,13 +9,13 @@
 /* ─── CSS Custom Properties (Design Tokens) ───────────────────────────── */
 :root {
   /* Primary Palette */
-  --color-bg-primary: #000000;
-  --color-bg-secondary: #0a0a0c;
+  --color-bg-primary: #060a16; /* Deep navy blue from logo */
+  --color-bg-secondary: #0a0f25;
   --color-bg-tertiary: rgba(255, 255, 255, 0.03);
-  --color-bg-card: rgba(25, 25, 30, 0.4);
+  --color-bg-card: rgba(15, 25, 55, 0.4);
   --color-bg-card-hover: rgba(40, 40, 45, 0.6);
   --color-bg-elevated: rgba(255, 255, 255, 0.08);
-  --color-bg-glass: rgba(20, 20, 25, 0.65);
+  --color-bg-glass: rgba(10, 20, 45, 0.55);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   --color-bg-glass-light: rgba(255, 255, 255, 0.08);
@@ -23,9 +23,9 @@
   -webkit-backdrop-filter: blur(16px) saturate(180%);
 
   /* Accent Colors */
-  --color-accent-blue: #00d4ff;
+  --color-accent-blue: #00e5ff; /* Cyan from logo */
   --color-accent-cyan: #00e5ff;
-  --color-accent-purple: #7c3aed;
+  --color-accent-purple: #d500f9; /* Magenta from logo */
   --color-accent-purple-light: #a78bfa;
   --color-accent-indigo: #6366f1;
   --color-accent-emerald: #10b981;

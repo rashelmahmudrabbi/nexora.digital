@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logoImg from '../../../public/logo.jpg';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
