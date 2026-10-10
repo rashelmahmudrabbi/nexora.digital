@@ -1,4 +1,4 @@
 :HL["/nexora.digital/_next/static/chunks/2b9y_ed834izi.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"contact","h":64,"c":"$Q2"}]]
-0:{"b":"r1RQq69TyLQDp2-ivgRMV","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"GVMWclJBcIB4MoRzVEbAo","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
