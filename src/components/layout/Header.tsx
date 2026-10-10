@@ -47,7 +47,7 @@ export default function Header() {
       <div className={styles.container}>
         {/* Logo */}
         <Link href="/" className={styles.logo} id="header-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Image src={logoImg} alt="Nexora Digital Logo" width={40} height={40} style={{ borderRadius: '8px', objectFit: 'cover' }} />
+          <Image src={logoImg} alt="Nexora Digital Logo" width={40} height={40} style={{ borderRadius: '50%', objectFit: 'cover', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} />
           <span className={styles.logoText} style={{ fontSize: '1.25rem', fontWeight: 700 }}>
             NEXORA<span className={styles.logoAccent} style={{ color: 'var(--color-accent-blue)' }}> DIGITAL</span>
           </span>

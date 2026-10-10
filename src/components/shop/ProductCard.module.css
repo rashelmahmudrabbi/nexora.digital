@@ -24,7 +24,8 @@
 .card:hover {
   border-color: var(--color-border-accent);
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* ─── Image ───────────────────────────────────────────────────────────── */
