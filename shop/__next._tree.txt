@@ -1,5 +1,5 @@
-:HL["/nexora.digital/_next/static/chunks/3hgyf4roa22dm.css","style"]
-:HL["/nexora.digital/_next/static/chunks/24u64ionp6gao.css","style"]
+:HL["/nexora.digital/_next/static/chunks/1txe2hwoqfyu1.css","style"]
+:HL["/nexora.digital/_next/static/chunks/2zht83vuz7bco.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"shop","h":64,"c":"$Q2"}]]
-0:{"b":"jRPJT_742m4qwuZ_XRVXD","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"qGymdnj5VZTwumgJKfZez","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

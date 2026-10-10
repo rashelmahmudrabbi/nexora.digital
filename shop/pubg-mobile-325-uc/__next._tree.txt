@@ -1,5 +1,5 @@
-:HL["/nexora.digital/_next/static/chunks/3hgyf4roa22dm.css","style"]
+:HL["/nexora.digital/_next/static/chunks/1txe2hwoqfyu1.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"pubg-mobile-325-uc","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"shop","h":64,"c":"$Q2"}]]
-0:{"b":"jRPJT_742m4qwuZ_XRVXD","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"qGymdnj5VZTwumgJKfZez","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
