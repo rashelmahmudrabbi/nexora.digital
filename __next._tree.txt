@@ -1,4 +1,4 @@
-:HL["/nexora.digital/_next/static/chunks/3zo8e2p5oa6vg.css","style"]
+:HL["/nexora.digital/_next/static/chunks/3hgyf4roa22dm.css","style"]
 :HL["/nexora.digital/_next/static/chunks/0fhcbsyvlzn12.css","style"]
 1:[["children",{"s":"__PAGE__","h":128}]]
-0:{"b":"ooj9v1gejoNoF3HIBh90F","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"qybog1UwmkRANJgfYF3DS","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
