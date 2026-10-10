@@ -46,10 +46,10 @@ export default function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         {/* Logo */}
-        <Link href="/" className={styles.logo} id="header-logo">
-          <span className={styles.logoIcon}>N</span>
-          <span className={styles.logoText}>
-            Nexora<span className={styles.logoAccent}>Digital</span>
+        <Link href="/" className={styles.logo} id="header-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Image src={logoImg} alt="Nexora Digital Logo" width={40} height={40} style={{ borderRadius: '8px', objectFit: 'cover' }} />
+          <span className={styles.logoText} style={{ fontSize: '1.25rem', fontWeight: 700 }}>
+            NEXORA<span className={styles.logoAccent} style={{ color: 'var(--color-accent-blue)' }}> DIGITAL</span>
           </span>
         </Link>
 
